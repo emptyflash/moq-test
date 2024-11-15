@@ -1,0 +1,20 @@
+{
+  "name": "moq-test",
+  "version": "1.0.0",
+  "main": "dist/watch.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "git clone git@github.com:kixelated/moq-js.git ../moq-js && cd ../moq-js && npm install --include dev && npm run build && cd lib/ && npm link"
+  },
+  "dependencies": {
+    "@kixelated/moq": "file:../moq-js/lib",
+    "@types/dom-webcodecs": "^0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^4.0.0",
+    "vite-plugin-checker": "^0.8.0"
+  }
+}
